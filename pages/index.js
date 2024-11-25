@@ -7,10 +7,11 @@ import Sustain from "../components/Sustain"
 import MetricsBanner from "../components/MetricsBanner"
 import certificatesListArr from "../public/assets/certificatesList.mjs"
 import achievementsListArr from "../public/assets/achievementsList.mjs"
-import CertificateGallery from "../components/CertificateGallery"
-import AchievementsGallery from "../components/AchievementsGallery"
 import ProductsSection from "../components/ProductsSections"
 import Footer from "../components/Footer"
+import AwardsGallery from "../components/AwardsGallery"
+import CertificatesGallery from "../components/CertificatesGallery"
+import AwardsGallery2 from "../components/AwardsGallery2"
 
 export default function Home() {
   return (
@@ -31,8 +32,8 @@ export default function Home() {
       >
         <MobileMenu />
       </div>
-      {/* Adjust this margin based on menu height */}
-      <div className="border-b border-gray-200">
+
+      <div>
         <Banner />
       </div>
 
@@ -42,18 +43,17 @@ export default function Home() {
       </div>
 
       {/* Sustain Section */}
-      <div className="md:pt-24 md:px-12 md:pb-24 pt-6 pb-10">
+      <div className="bg-orange-50 md:py-10">
         <Sustain />
       </div>
+
+      {/* Certificates Section */}
       <div>
-        <MetricsBanner />
-      </div>
-      <div>
-        <CertificateGallery certificates={certificatesListArr} />
+        <AwardsGallery certificates={certificatesListArr} />
       </div>
 
       <div>
-        <AchievementsGallery achievements={achievementsListArr} />
+        <CertificatesGallery achievements={achievementsListArr} />
       </div>
 
       <div>
@@ -62,6 +62,13 @@ export default function Home() {
     </div>
   )
 }
+
+{
+  /* Metrics Section */
+}
+//  <div>
+//  <MetricsBanner />
+// </div>
 
 {
   /* Desktop Cards Section */

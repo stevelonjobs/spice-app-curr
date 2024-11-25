@@ -25,16 +25,13 @@ const MobileMenu = () => {
   return (
     <div>
       {/* Header */}
-      <div className="flex items-center justify-between p-4 text-black">
+      <div className="flex items-center justify-between p-4">
         {/* Logo Section */}
-        <div className="flex items-center text-xl md:text-2xl font-bold text-black mr-4 md:mr-8">
-          <FaSquare className="text-black mr-2" />
+        <div className="flex items-center text-xl md:text-2xl font-bold mr-4 md:mr-8">
+          <FaSquare className="mr-2" />
           AgroHaat
         </div>
-        <button
-          onClick={toggleMenu}
-          className="bg-none border-none text-black z-20"
-        >
+        <button onClick={toggleMenu} className="bg-none border-none z-20">
           {isOpen ? "" : <FaBars size={30} />}
         </button>
       </div>
@@ -48,13 +45,13 @@ const MobileMenu = () => {
             {/* Close button on the right */}
             <FaTimes
               size={30}
-              className="absolute top-5 right-5 text-black cursor-pointer z-30"
+              className="absolute top-5 right-5 cursor-pointer z-30"
               onClick={toggleMenu}
             />
             {menuItems.map((item, index) => (
               <div key={index} className="py-3 border-b border-neutral-950">
                 <div
-                  className="flex justify-between items-center cursor-pointer text-black"
+                  className="flex justify-between items-center cursor-pointer"
                   onClick={() => handleMenuClick(index)}
                 >
                   <span>{item.name}</span>
@@ -65,10 +62,7 @@ const MobileMenu = () => {
                 {activeMenu === index && item.subMenu.length > 0 && (
                   <div className="pl-5 mt-2 bg-gray-100">
                     {item.subMenu.map((subItem, subIndex) => (
-                      <div
-                        key={subIndex}
-                        className="py-2 text-black hover:bg-gray-100 hover:text-black"
-                      >
+                      <div key={subIndex} className="py-2">
                         {subItem}
                       </div>
                     ))}

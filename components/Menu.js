@@ -14,7 +14,7 @@ export default function Menu() {
     <div className="flex items-center justify-between p-4 w-full gap-4 bg-white shadow-md">
       {/* Logo Section */}
       <div className="flex items-center text-xl md:text-2xl font-bold text-black mr-4 md:mr-8">
-        <FaSquare className="text-black mr-2" />
+        <FaSquare className="mr-2" />
         AgroHaat
       </div>
 
@@ -23,7 +23,7 @@ export default function Menu() {
         {menuItems.map((menu, index) => (
           <div
             key={index}
-            className="relative text-black cursor-pointer"
+            className="relative cursor-pointer"
             onMouseEnter={() => setActiveMenu(index)}
             onMouseLeave={() => setActiveMenu(null)}
           >
@@ -37,7 +37,7 @@ export default function Menu() {
                 {menu.items.map((item, subIndex) => (
                   <button
                     key={subIndex}
-                    className="block text-black py-1 px-3 md:py-2 md:px-4 cursor-pointer hover:bg-gray-200 text-left w-full"
+                    className="block py-1 px-3 md:py-2 md:px-4 cursor-pointer hover:bg-gray-200 text-left w-full"
                   >
                     {item}
                   </button>
@@ -49,7 +49,7 @@ export default function Menu() {
       </div>
 
       {/* Contact Us Button */}
-      <button className="bg-black text-white px-3 py-2 md:px-4 md:py-2 rounded-lg ml-4 md:mr-10">
+      <button className="bg-orange-400 hover:bg-orange-500 px-3 py-2 md:px-4 md:py-2 rounded-lg ml-4 md:mr-10">
         Contact Us
       </button>
     </div>
@@ -70,7 +70,7 @@ export default function Menu() {
 //   return (
 //     <div className="flex items-center justify-between p-2 w-full gap-8">
 //       {/* Logo Section */}
-//       <div className="text-2xl font-bold text-black mr-52">AgroHaat</div>
+//       <div className="text-2xl font-bold mr-52">AgroHaat</div>
 
 //       {/* Menu Section */}
 //       <div className="flex bg-neutral-800 p-2 flex-grow justify-around">
